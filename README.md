@@ -1,4 +1,4 @@
-# hubot-quote
+# hubot-quote [![Build Status](https://travis-ci.org/bot-scripts/hubot-quote.svg)](https://travis-ci.org/bot-scripts/hubot-quote)
 
 A hubot script for pulling star wars quote
 
