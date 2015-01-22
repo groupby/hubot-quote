@@ -27,6 +27,7 @@
   },
   "devDependencies": {
     "chai": "*",
+    "coffee-script": "^1.8.0",
     "grunt-cli": "^0.1.13",
     "grunt-contrib-watch": "~0.5.3",
     "grunt-mocha-test": "~0.7.0",
