@@ -4,46 +4,29 @@ path = require("path")
 chai.use require 'sinon-chai'
 nock = require 'nock'
 expect = chai.expect
-
-Robot       = require("hubot/src/robot")
+helper = require 'hubot-mock-adapter-helper'
 TextMessage = require("hubot/src/message").TextMessage
 process.env.HUBOT_LOG_LEVEL = 'debug'
 
 describe 'quote', ->
-  robot = null
-  user = null
-  adapter = null
+  {robot, user, adapter} = {}
   nockScope = null
 
   beforeEach (done)->
 
     nock.disableNetConnect()
     nockScope = nock 'http://subfusion.net/cgi-bin/quote.pl'
-
-    robot = new Robot(null, "mock-adapter", false, "hubot")
     nock.enableNetConnect '127.0.0.1'
-    robot.adapter.on "connected", ->
+
+    helper.setupRobot (ret) ->
+      {robot, user, adapter} = ret
       robot.loadFile path.resolve('.', 'src'), 'quote.coffee'
 
       # load help scripts to test help messages
       hubotScripts = path.resolve 'node_modules', 'hubot-help', 'src'
       robot.loadFile hubotScripts, 'help.coffee'
 
-      user = robot.brain.userForId '1', {
-        name: 'dtaniwaki'
-        room: '#mocha'
-      }
-      adapter = robot.adapter
-
-      # Wait until hubot is ready
-      waitForHelp = ->
-        if robot.helpCommands().length > 0
-          do done
-        else
-          setTimeout waitForHelp, 100
-      do waitForHelp
-    do robot.run
-
+      done()
 
   afterEach ->
     do robot.shutdown
