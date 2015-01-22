@@ -21,7 +21,7 @@ module.exports = (robot) ->
         return
 
       # parse quote from html
-      $ = cheerio.load(quote, {
-#        normalizeWhitespace: true
-      })
+      # use { normalizeWhitespace: true } to remove line breaks and excess whitespace
+      $ = cheerio.load(quote)
+
       msg.send $('body > b').text().trim()
