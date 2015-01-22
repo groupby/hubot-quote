@@ -1,26 +1,26 @@
-# hubot-youtube
+# hubot-quote
 
-A hubot script for searching YouTube
+A hubot script for pulling star wars quote
 
-See [`src/youtube.coffee`](src/youtube.coffee) for full documentation.
+See [`src/quote.coffee`](src/quote.coffee) for full documentation.
 
 ## Installation
 
 In hubot project repo, run:
 
-`npm install hubot-youtube --save`
+`npm install hubot-quote --save`
 
-Then add **hubot-youtube** to your `external-scripts.json`:
+Then add **hubot-quote** to your `external-scripts.json`:
 
 ```json
 [
-  "hubot-youtube"
+  "hubot-quote"
 ]
 ```
 
 ## Sample Interaction
 
 ```
-user1> hubot youtube no no no cat remix
-hubot> http://www.youtube.com/watch?v=z7OJ3vDqyw8&feature=youtube_gdata
+user1> hubot quote
+hubot>  Han Solo: Get in there you big furry oaf! I don't care what you smell!
 ```
