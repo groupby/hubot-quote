@@ -1,23 +1,23 @@
 {
   "name": "hubot-quote",
-  "description": "A hubot script for searching YouTube",
-  "version": "0.1.2",
+  "description": "A hubot script for star wars quotes",
+  "version": "0.1",
   "author": {
-    "name": "Josh Nichols",
-    "email": "technicalpickles@github.com"
+    "name": "ferronrsmith",
+    "email": "ferronrsmith@gmail.com"
   },
   "license": "MIT",
   "keywords": [
     "hubot",
     "hubot-scripts",
-    "youtube"
+    "quote"
   ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/bot-scripts/hubot-youtube.git"
+    "url": "git@github.com:bot-scripts/hubot-quote.git"
   },
   "bugs": {
-    "url": "https://github.com/hubot-scripts/hubot-youtube/issues"
+    "url": "https://github.com/bot-scripts/hubot-quote/issues"
   },
   "dependencies": {
     "cheerio": "^0.18.0"
@@ -26,40 +26,22 @@
     "hubot": "2.x"
   },
   "devDependencies": {
-    "hubot": "2.x",
-    "mocha": "*",
     "chai": "*",
-    "sinon-chai": "*",
-    "sinon": "*",
+    "grunt-contrib-watch": "~0.5.3",
     "grunt-mocha-test": "~0.7.0",
     "grunt-release": "~0.6.0",
+    "hubot": "2.x",
+    "hubot-help": "^0.1.1",
+    "hubot-mock-adapter": "^1.0.0",
     "matchdep": "~0.1.2",
-    "grunt-contrib-watch": "~0.5.3"
+    "mocha": "*",
+    "nock": "^0.57.0",
+    "sinon": "*",
+    "sinon-chai": "*"
   },
   "main": "index.coffee",
   "scripts": {
     "test": "grunt test"
   },
-  "gitHead": "0b0e57a0f2c0e1df1c62ea9be142a1ae19ce3b00",
-  "homepage": "https://github.com/hubot-scripts/hubot-youtube",
-  "_id": "hubot-youtube@0.1.2",
-  "_shasum": "79789fcb8d1701c1e87ade909d7d29c2042dd8a1",
-  "_from": "hubot-youtube@*",
-  "_npmVersion": "1.4.24",
-  "_npmUser": {
-    "name": "technicalpickles",
-    "email": "josh@technicalpickles.com"
-  },
-  "maintainers": [
-    {
-      "name": "technicalpickles",
-      "email": "josh@technicalpickles.com"
-    }
-  ],
-  "dist": {
-    "shasum": "79789fcb8d1701c1e87ade909d7d29c2042dd8a1",
-    "tarball": "http://registry.npmjs.org/hubot-youtube/-/hubot-youtube-0.1.2.tgz"
-  },
-  "directories": {},
-  "_resolved": "https://registry.npmjs.org/hubot-youtube/-/hubot-youtube-0.1.2.tgz"
+  "homepage": "https://github.com/bot-scripts/hubot-quote"
 }

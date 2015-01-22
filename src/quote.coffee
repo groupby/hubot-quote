@@ -1,8 +1,12 @@
 # Description:
-#   Messing around with the YouTube API.
+#   Messing around with the Star Wars Quotes
 #
 # Commands:
-#   hubot quote - Searches YouTube for the query and returns the video embed link.
+#   hubot quote - Queries an endpoint for a random star wars quote
+#   hubot qt - Queries an endpoint for a random star wars quote
+#
+# Author:
+#   ferronrsmith
 
 cheerio = require('cheerio')
 
@@ -12,11 +16,11 @@ module.exports = (robot) ->
     .get() (err, res, body) ->
       quote = body
 
-      unless quote?
-        msg.send "No video results for \"#{query}\""
+      unless res.statusCode is 200
+        msg.send "You didn't believe. That is why it failed!"
         return
 
-
+      # parse quote from html
       $ = cheerio.load(quote, {
 #        normalizeWhitespace: true
       })
