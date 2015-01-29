@@ -16,12 +16,10 @@ module.exports = (robot) ->
     .get() (err, res, body) ->
       quote = body
 
-      unless res.statusCode is 200
+      if res? and res.statusCode is 200
+        # parse quote from html
+        # use { normalizeWhitespace: true } to remove line breaks and excess whitespace
+        $ = cheerio.load(quote)
+        msg.send $('body > b').text().trim()
+      else
         msg.send "You didn't believe. That is why it failed!"
-        return
-
-      # parse quote from html
-      # use { normalizeWhitespace: true } to remove line breaks and excess whitespace
-      $ = cheerio.load(quote)
-
-      msg.send $('body > b').text().trim()
