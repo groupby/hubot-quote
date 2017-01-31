@@ -1,5 +1,7 @@
 # hubot-quote [![Build Status](https://travis-ci.org/bot-scripts/hubot-quote.svg)](https://travis-ci.org/bot-scripts/hubot-quote)
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/groupby/hubot-quote.svg)](https://greenkeeper.io/)
+
 A hubot script for pulling star wars quote
 
 See [`src/quote.coffee`](src/quote.coffee) for full documentation.
