@@ -20,7 +20,7 @@
     "url": "https://github.com/bot-scripts/hubot-quote/issues"
   },
   "dependencies": {
-    "cheerio": "^0.18.0"
+    "cheerio": "^0.22.0"
   },
   "peerDependencies": {
     "hubot": "2.x"
@@ -28,17 +28,17 @@
   "devDependencies": {
     "chai": "*",
     "coffee-script": "^1.8.0",
-    "grunt-cli": "^0.1.13",
-    "grunt-contrib-watch": "~0.5.3",
-    "grunt-mocha-test": "~0.7.0",
-    "grunt-release": "~0.6.0",
+    "grunt-cli": "^1.2.0",
+    "grunt-contrib-watch": "~1.0.0",
+    "grunt-mocha-test": "~0.13.2",
+    "grunt-release": "~0.14.0",
     "hubot": "2.x",
-    "hubot-help": "^0.1.1",
+    "hubot-help": "^0.2.0",
     "hubot-mock-adapter": "^1.0.0",
     "hubot-mock-adapter-helper": "0.0.1",
-    "matchdep": "~0.1.2",
+    "matchdep": "~1.0.1",
     "mocha": "*",
-    "nock": "^0.57.0",
+    "nock": "^9.0.2",
     "sinon": "*",
     "sinon-chai": "*"
   },
